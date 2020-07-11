@@ -41,7 +41,13 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - （18）server 此选项允许您配置Nuxt.js应用程序的服务器实例变量。
 - （19）transition 该配置项用于个性化配置应用过渡效果属性的默认值。
 
-### 线上部署
+### 运行原理
+
+<img src="http://missxiaolin.com/gw1.png" />
+
+## 线上部署
+
+<img src="http://missxiaolin.com/gw2.png" />
 
 ### 打包
 
