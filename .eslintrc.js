@@ -18,6 +18,7 @@ module.exports = {
     'no-console': 'off',
     'space-before-function-paren': 0,
     'indent': 'off',
-    'eol-last': 'off'
+    'eol-last': 'off',
+    'no-trailing-spaces': 'off'
   }
 }
