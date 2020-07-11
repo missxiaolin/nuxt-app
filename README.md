@@ -43,11 +43,11 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ### 运行原理
 
-<img src="http://missxiaolin.com/gw1.png" />
+<img src="http://missxiaolin.com/gw2.png" />
 
 ## 线上部署
 
-<img src="http://missxiaolin.com/gw2.png" />
+<img src="http://missxiaolin.com/gw1.png" />
 
 ### 打包
 
