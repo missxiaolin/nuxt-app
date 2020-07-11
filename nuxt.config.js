@@ -90,6 +90,8 @@ export default {
     },
     extend (config, ctx) {
 
-    }
+    },
+    // nuxt - IE9 样式失效问题
+    extractCSS: { allChunks: true }
   }
 }
