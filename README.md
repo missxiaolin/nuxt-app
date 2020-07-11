@@ -67,7 +67,7 @@ body {
 
 ## 线上部署
 
-<img src="http://missxiaolin.com/gw1.png" />
+<img src="http://missxiaolin.com/gs3.jpg" />
 
 ### 打包
 
