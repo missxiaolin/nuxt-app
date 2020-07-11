@@ -79,3 +79,18 @@ server{
 
 }
 ~~~
+
+### pm2 守护进程
+
+### 安装pm2
+
+~~~
+cnpm i pm2 -g
+~~~
+
+### 项目创建pm2.jsom
+
+~~~
+pm2 start pm2.json
+~~~
+
