@@ -40,3 +40,42 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - （17）router 该配置项可用于覆盖 Nuxt.js 默认的 vue-router 配置。
 - （18）server 此选项允许您配置Nuxt.js应用程序的服务器实例变量。
 - （19）transition 该配置项用于个性化配置应用过渡效果属性的默认值。
+
+### 线上部署
+
+### 打包
+
+~~~
+npm run build
+~~~
+
+### 安装node_modules
+
+~~~
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+~~~
+
+### 设置nginx 方向代理（记得gz压缩配置）
+
+~~~
+server{
+	gzip on;
+        gzip_static on;
+        gzip_min_length 1k;
+        gzip_buffers 16 64k;
+        gzip_http_version 1.1;
+        gzip_comp_level 9;
+        gzip_types text/plain application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+        gzip_vary on;
+
+	listen  80;
+	server_name  域名;
+
+	location / {
+		root /Users/web/miss/nuxt-app;
+		proxy_pass http://0.0.0.0:8011;
+    }
+
+
+}
+~~~
