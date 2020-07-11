@@ -93,5 +93,8 @@ export default {
     },
     // nuxt - IE9 样式失效问题
     extractCSS: { allChunks: true }
+  },
+  router: {
+    middleware: 'vueRouter'
   }
 }
