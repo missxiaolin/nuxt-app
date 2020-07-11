@@ -15,8 +15,9 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "no-console": "off",
+    'no-console': 'off',
     'space-before-function-paren': 0,
-    'indent': 'off'
+    'indent': 'off',
+    'eol-last': 'off'
   }
 }

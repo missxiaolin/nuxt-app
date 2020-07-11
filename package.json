@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-stage-3": "^6.24.1",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {

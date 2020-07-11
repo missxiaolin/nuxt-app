@@ -41,6 +41,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: '~assets/js/poly.js', ssr: true },
   ],
   /*
   ** Auto import components
