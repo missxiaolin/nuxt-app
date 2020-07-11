@@ -41,6 +41,22 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - （18）server 此选项允许您配置Nuxt.js应用程序的服务器实例变量。
 - （19）transition 该配置项用于个性化配置应用过渡效果属性的默认值。
 
+### 移动端适配
+
+下载 flexible.js https://github.com/amfe/lib-flexible
+
+配置 postcss-pxtorem
+
+~~~
+cnpm install postcss-pxtorem
+~~~
+
+### 配置文件
+
+~~~
+https://github.com/nuxt-community/dotenv-module
+~~~
+
 ### 运行原理
 
 <img src="http://missxiaolin.com/gw2.png" />
@@ -136,20 +152,4 @@ pm2 stor 0 # 停止id为0的应用
 pm2 restart all # 重启所有应用
 pm2 restart 0 # 重启id为0的应用
 pm2 delete all # 关闭删除所有应用
-~~~
-
-### 移动端适配
-
-下载 flexible.js https://github.com/amfe/lib-flexible
-
-配置 postcss-pxtorem
-
-~~~
-cnpm install postcss-pxtorem
-~~~
-
-### 配置文件
-
-~~~
-https://github.com/nuxt-community/dotenv-module
 ~~~

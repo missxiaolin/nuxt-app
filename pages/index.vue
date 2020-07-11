@@ -9,7 +9,7 @@
 <script>
 export default {
   fetch () {
-    // console.log(process.env.APP_ENV)
+    console.log(process.env.APP_ENV)
   }
 }
 </script>
