@@ -54,7 +54,11 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // Simple usage
+    '@nuxtjs/dotenv',
+    // With options
+    ['@nuxtjs/dotenv', { systemvars: false }],
   ],
   /*
   ** Axios module configuration

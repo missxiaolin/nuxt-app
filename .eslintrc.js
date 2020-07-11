@@ -14,5 +14,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    "no-console": "off",
+    'space-before-function-paren': 0,
+    'indent': 'off'
+  }
 }
