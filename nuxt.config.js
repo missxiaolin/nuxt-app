@@ -1,3 +1,5 @@
+import webpack from 'webpack'
+
 
 export default {
   /*
@@ -78,6 +80,11 @@ export default {
   */
   build: {
     vendor: ['axios'],
+    plugins: [
+      new webpack.ProvidePlugin({
+        _: 'lodash'
+      })
+    ],
     postcss: {
       plugins: {
         // 'autoprefixer': {
