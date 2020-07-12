@@ -95,7 +95,11 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    // analyze: true, 打包大小观察使用
     vendor: ['axios'],
+    // filenames: { // 目录名称
+    //   chunk: ({ isDev }) => isDev ? '[name].js' : '[id].[contenthash].js'
+    // },
     plugins: [
       new webpack.ProvidePlugin({
         _: 'lodash'
