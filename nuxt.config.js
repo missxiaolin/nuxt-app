@@ -1,5 +1,23 @@
 import webpack from 'webpack'
 
+let dotenv = { systemvars: false }
+
+switch (process.env.NODE_ENV) {
+  case 'development':
+    dotenv = { ...dotenv, ...{ filename: '.env.dev' } }
+    break
+  case 'qa':
+    dotenv = { ...dotenv, ...{ filename: '.env.qa' } }
+    break
+  case 'pre':
+    dotenv = { ...dotenv, ...{ filename: '.env.pre' } }
+    break
+  case 'gr':
+    dotenv = { ...dotenv, ...{ filename: '.env.gr' } }
+    break
+  default:
+    dotenv = { ...dotenv, ...{ filename: '.env.prd' } }
+}
 
 export default {
   /*
@@ -56,10 +74,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    // Simple usage
-    '@nuxtjs/dotenv',
-    // With options
-    ['@nuxtjs/dotenv', { systemvars: false }],
+    ['@nuxtjs/dotenv', dotenv],
   ],
   /*
   ** Nuxt.js modules
@@ -67,7 +82,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-
+    // With options
+    ['@nuxtjs/dotenv', dotenv],
   ],
   /*
   ** Axios module configuration
