@@ -20,7 +20,7 @@ switch (process.env.NODE_ENV) {
 }
 
 export default {
-  buildDir: 'nuxt-dist', // 更改打包目录
+  // buildDir: 'nuxt-dist', // 更改打包目录
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -118,7 +118,15 @@ export default {
       }
     },
     extend(config, ctx) {
-
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)(nuxt-dist)/
+        })
+      }
     },
     // nuxt - IE9 样式失效问题
     extractCSS: { allChunks: true }
