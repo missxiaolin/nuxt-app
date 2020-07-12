@@ -65,7 +65,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    
+
   ],
   /*
   ** Axios module configuration
@@ -77,6 +77,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    vendor: ['axios'],
     postcss: {
       plugins: {
         // 'autoprefixer': {
@@ -88,7 +89,7 @@ export default {
         }
       }
     },
-    extend (config, ctx) {
+    extend(config, ctx) {
 
     },
     // nuxt - IE9 样式失效问题
