@@ -185,6 +185,13 @@ const app = express()
 app.use('/static', express.static('static'))
 ~~~
 
+### 接入监控 
+
+@ qonfucius / nuxt-prometheus-module
+
+### 接入Apollo
+
+@nuxtjs/apollo
 
 
 
