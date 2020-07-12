@@ -85,14 +85,15 @@ export default {
     '@nuxtjs/axios',
     // With options
     ['@nuxtjs/dotenv', dotenv],
+    // 监控相关
     [
       '@qonfucius/nuxt-prometheus-module',
       {
         port: 9091,
         host: '0.0.0.0',
         metrics: {
-          collectDefault: true,
-          requestDuration: true,
+          collectDefault: true, // 有关nodejs本身的默认指标。传递对象以将选项发送到
+          requestDuration: true, // 带有路线的请求时长图块
         },
       },
     ],
