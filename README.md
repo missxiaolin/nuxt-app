@@ -153,3 +153,39 @@ pm2 restart all # 重启所有应用
 pm2 restart 0 # 重启id为0的应用
 pm2 delete all # 关闭删除所有应用
 ~~~
+
+### 开启eslint检查
+
+在nuxt.config.js的build属性下添加:
+
+~~~
+build: {
+    extend (config, ctx) {
+        // Run ESLint on save
+        if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+            enforce: 'pre',
+            test: /\.(js|vue)$/,
+            loader: 'eslint-loader',
+            exclude: /(node_modules)/
+        })
+        }
+    }
+}
+~~~
+
+### 静态文件的处理
+
+根目录下有个/static文件夹，我们希望这里面的文件可以直接通过url访问，需要在/server/index.js中加入一句：
+
+~~~
+const express = require('express')
+const app = express()
+
+app.use('/static', express.static('static'))
+~~~
+
+
+
+
+
