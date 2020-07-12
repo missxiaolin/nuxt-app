@@ -1,12 +1,6 @@
 [
     {
         "name": "gs-gw",
-        "script": "npm run start",
-        "env_dev": {
-            "NODE-ENV": "development"
-        },
-        "env_production": {
-            "NODE_ENV": "production"
-        }
+        "script": "npm run start"
     }
 ]
