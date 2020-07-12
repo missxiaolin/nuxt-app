@@ -85,6 +85,17 @@ export default {
     '@nuxtjs/axios',
     // With options
     ['@nuxtjs/dotenv', dotenv],
+    [
+      '@qonfucius/nuxt-prometheus-module',
+      {
+        port: 9091,
+        host: '0.0.0.0',
+        metrics: {
+          collectDefault: true,
+          requestDuration: true,
+        },
+      },
+    ],
   ],
   /*
   ** Axios module configuration
@@ -118,7 +129,7 @@ export default {
       }
     },
     extend(config, ctx) {
-      
+
     },
     // nuxt - IE9 样式失效问题
     extractCSS: { allChunks: true }
