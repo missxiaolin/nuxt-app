@@ -193,6 +193,39 @@ app.use('/static', express.static('static'))
 
 @nuxtjs/apollo
 
+### meta
+
+```
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+<!-- iOS中Safari允许全屏浏览 -->
+<meta name="apple-mobile-web-app-capable" content="no">
+<!-- iOS中Safari顶端状态条样式 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="724">
+<!-- 忽略将数字变为电话号码, 忽略自动识别邮箱账号 -->
+<meta name="format-detection" content="telephone=no, email=no">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- UC强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<!-- UC强制全屏 -->
+<meta name="full-screen" content="yes">
+<!-- QQ强制全屏 -->
+<meta name="x5-fullscreen" content="true">
+<!-- UC应用模式 -->
+<meta name="browsermode" content="application">
+<!-- QQ应用模式 -->
+<meta name="x5-page-mode" content="app">
+<!-- windows phone 点击无高光 -->
+<meta name="msapplication-tap-highlight" content="no">
+```
 
 
 
