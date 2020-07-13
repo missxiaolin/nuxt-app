@@ -6,15 +6,6 @@ switch (process.env.NODE_ENV) {
   case 'development':
     dotenv = { ...dotenv, ...{ filename: '.env.dev' } }
     break
-  case 'qa':
-    dotenv = { ...dotenv, ...{ filename: '.env.qa' } }
-    break
-  case 'pre':
-    dotenv = { ...dotenv, ...{ filename: '.env.pre' } }
-    break
-  case 'gr':
-    dotenv = { ...dotenv, ...{ filename: '.env.gr' } }
-    break
   default:
     dotenv = { ...dotenv, ...{ filename: '.env.prd' } }
 }
