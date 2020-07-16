@@ -230,5 +230,62 @@ https://grafana.com/grafana/dashboards/11159
 <meta name="msapplication-tap-highlight" content="no">
 ```
 
+### 增加网站seo、统计脚本代码
 
+以seo代码为例 在utils文件夹下建立assist.js文件 原js代码更改为nuxt可用
+
+```
+export function seo() {
+    let bp = document.createElement('script');
+    let curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    let s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+}
+```
+
+引入
+
+~~~
+import {seo} from '~/utils/assist'
+export default {
+    mounted (){
+    //直接将SEO脚本放在页面会被当成文本解析，所以将方法提取出来，放到mounted hook里面执行
+    seo();
+    },
+}
+~~~
+
+百度统计
+
+~~~
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?xxxx";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+~~~
+
+引入
+
+~~~
+mounted (){
+//统计脚本
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?xxxx";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+},
+~~~
 
