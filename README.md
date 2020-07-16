@@ -187,7 +187,10 @@ app.use('/static', express.static('static'))
 
 ### 接入监控 
 
-@ qonfucius / nuxt-prometheus-module
+~~~
+@qonfucius/nuxt-prometheus-module
+https://grafana.com/grafana/dashboards/11159
+~~~
 
 ### 接入Apollo
 
