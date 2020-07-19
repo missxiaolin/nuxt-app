@@ -31,8 +31,14 @@ export default {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
+      { name: 'format-detection', content: 'telephone=no' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' },
-      { name: 'renderer', content: 'webkit' },
+       /*以下是设置双核浏览器默认状态下使用极速模式打开*/
+      { name: 'renderer', content: 'webkit'},
+      { name: 'force-rendering', content: 'webkit'},
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=Edge,chrome=1'},
+      { name: 'baidu-site-verification', content: 'mREHhDF8nW'},
+
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
