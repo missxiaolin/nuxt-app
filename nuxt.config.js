@@ -42,7 +42,13 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // { rel: 'shortcut icon', type: 'image/x-icon', href: '' },
+      // { rel: 'bookmark', type: 'image/x-icon', href: 'https://favicon.ico' },
+      // { rel: 'apple-touch-icon', type: 'image/x-icon', href: 'https:///frontrs/touch-icon-iphone-68.png' },
+      // { rel: 'apple-touch-icon', type: 'image/x-icon', href: 'https:///frontrs/touch-icon-ipad-76.png' },
+      // { rel: 'apple-touch-icon', type: 'image/x-icon', href: 'https:///frontrs/touch-icon-ipad-120.png', sizes: "120x120"  },
+      // { rel: 'apple-touch-icon', type: 'image/x-icon', href: 'https:///frontrs/touch-icon-ipad-152.png', sizes: "152x152"  }
     ],
     script: [
       { src: '/js/flexible.js', type: 'text/javascript', charset: 'utf-8' }
