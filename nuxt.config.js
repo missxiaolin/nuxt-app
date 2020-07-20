@@ -51,7 +51,8 @@ export default {
       // { rel: 'apple-touch-icon', type: 'image/x-icon', href: 'https:///frontrs/touch-icon-ipad-152.png', sizes: "152x152"  }
     ],
     script: [
-      { src: '/js/flexible.js', type: 'text/javascript', charset: 'utf-8' }
+      { src: '/js/flexible.js', type: 'text/javascript', charset: 'utf-8' },
+      { src: '/js/prefixfree.min.js', type: 'text/javascript', charset: 'utf-8' }
     ]
   },
   /*
