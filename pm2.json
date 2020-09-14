@@ -1,6 +1,6 @@
 [
     {
         "name": "gs-gw",
-        "script": "npm run start"
+        "script": "npm run start:prd"
     }
 ]
